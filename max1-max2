@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n,m,max,max2,r,key,temp;
+    max=-1;
+    max2=-1;
+    temp=-1;
+    cout<<"Enter the no f digits"<<endl;
+    cin>>n;
+    cout<<"Enter the no:"<<endl;
+    cin>>m;
+    
+    for(int i=1;i<=n;i++)
+    {
+        r=m%10;
+        if(max<r){
+            temp=max;
+            
+            max=r;
+            
+        }
+       if(temp<r && r!=max){
+        temp=r;}
+       max2=temp;
+      key=max-max2;
+      m=m/10;
+        
+    }
+    
+    cout<<key<<endl;
+    return 0;
+}
